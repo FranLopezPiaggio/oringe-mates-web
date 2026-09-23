@@ -7,19 +7,21 @@ export interface CheckoutCustomerData {
   direccion: string;
 }
 
+const whatsappNumber = process.env.WHATSAPP_NUMBER 
+
 export function buildWhatsAppOrderUrl({
   customer,
   items,
   subtotal,
   orderNumber = `OM-${Date.now().toString().slice(-5)}`,
-  adminPhone = '5491100000000',
-}: {
+  adminPhone = whatsappNumber,
+}:{
   customer: CheckoutCustomerData;
   items: CartProductItem[];
   subtotal: number;
   orderNumber?: string;
   adminPhone?: string;
-}) {
+}){
   const itemsText = items
     .map(
       (item) =>

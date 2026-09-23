@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useCartStore } from '../store/useCartStore';
-import { buildWhatsAppOrderUrl } from '@/lib/whatsapp/formatOrder';
+import { buildWhatsAppOrderUrl } from '@/lib/messaging/formatOrder';
 import { X, Plus, Minus, Trash2, ShoppingBag } from 'lucide-react';
 
 export default function CartDrawer() {

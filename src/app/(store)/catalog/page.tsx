@@ -1,6 +1,7 @@
 // src/app/productos/page.tsx
+import CatalogView from '@/features/catalog/components/CatalogView';
 import type { Metadata } from 'next';
-import CatalogView from '@/components/catalog/CatalogView';
+
 
 export const metadata: Metadata = {
   title: 'Catálogo de Piezas • Origen Mates',
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProductosPage() {
-  return <CatalogView />;
+  return <CatalogView/>
 }

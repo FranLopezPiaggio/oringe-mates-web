@@ -3,8 +3,8 @@ import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/features/layout/components/Navbar';
 import Footer from '@/features/layout/components/Footer';
-import { CartProvider } from '@/features/cart/context/CartContext';
 import CartDrawer from '@/features/cart/components/CartDrawer';
+import WhatsAppFloatingButton from '@/features/layout/components/WhatsAppFloatingButton';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -31,12 +31,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`scroll-smooth ${playfair.variable} ${jakarta.variable}`}>
       <body className="bg-background text-on-background font-sans antialiased">
-        <CartProvider>
           <Navbar/>
           {children}
           <Footer/>
           <CartDrawer />
-        </CartProvider>
+          <WhatsAppFloatingButton 
+            intent="GENERAL_SUPPORT" 
+            data={{ subject: 'atención general y stock' }} 
+          />
       </body>
     </html>
   );

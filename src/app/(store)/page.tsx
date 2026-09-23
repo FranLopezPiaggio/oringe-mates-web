@@ -1,13 +1,14 @@
 import Navbar from '@/features/layout/components/Navbar';
 // import TopAnnouncement from "@/components/layout/TopAnnouncement";
-import Hero from '@/components/home/Hero';
-import FeaturedProducts from '@/components/home/FeaturedProducts';
+
 import PromoBanner from '@/features/layout/components/PromoBanner';
-import BrandManifesto from '@/components/home/BranManifesto';
-import BlogSection from '@/components/home/BlogSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import ContactForm from '@/components/home/ContactForm';
 import Footer from '@/features/layout/components/Footer';
+import Hero from '@/features/home/components/Hero';
+import FeaturedProducts from '@/features/home/components/FeaturedProducts';
+import BrandManifesto from '@/features/home/components/BranManifesto';
+import BlogSection from '@/features/home/components/BlogSection';
+import TestimonialsSection from '@/features/home/components/TestimonialsSection';
+import ContactForm from '@/features/home/components/ContactForm';
 
 export default function HomePage() {
   return (
