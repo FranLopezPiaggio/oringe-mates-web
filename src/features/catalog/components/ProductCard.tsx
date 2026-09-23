@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useCartStore } from '@/features/cart/store/useCartStore';
 
 export interface Product {
   id: string;
@@ -9,26 +12,33 @@ export interface Product {
   price: string;
   imageSrc: string;
   imageAlt: string;
-  // Banderas / Flags para el filtrado
   isNew?: boolean;
   isTrending?: boolean;
+  numericPrice?: number;
 }
 
-interface ProductCardProps {
-  product: Product;
-}
+export default function ProductCard({ product }: { product: Product }) {
+  const addItem = useCartStore((state) => state.addItem);
 
-export default function ProductCard({ product }: ProductCardProps) {
+  const handleAddToCart = () => {
+    const numericPrice =
+      product.numericPrice ||
+      Number(product.price.replace(/[^0-9]/g, '')) ||
+      0;
+
+    addItem({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      numericPrice,
+      imageSrc: product.imageSrc,
+    });
+  };
+
   return (
     <article className="group flex flex-col bg-surface border border-outline-variant transition-all duration-200 hover:border-outline">
       <div className="relative w-full aspect-[3/4] overflow-hidden bg-surface-container-low">
-        <Image
-          src={product.imageSrc}
-          alt={product.imageAlt}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        <Image alt={product.imageAlt} className="object-cover transition-transform duration-500 group-hover:scale-105" fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" src={product.imageSrc}/>
         <span className="absolute top-3 left-3 bg-surface text-primary border border-outline-variant px-2 py-0.5 font-label-uppercase text-[10px] uppercase tracking-wider z-10">
           {product.badge}
         </span>
@@ -49,7 +59,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="font-body-md font-semibold text-primary">
             {product.price}
           </span>
-          <button className="px-3 py-1.5 border border-primary text-primary font-label-uppercase text-[10px] tracking-wider uppercase hover:bg-primary hover:text-on-primary transition-colors duration-150 cursor-pointer">
+          <button
+            onClick={handleAddToCart}
+            className="px-3 py-1.5 border border-primary text-primary font-label-uppercase text-[10px] tracking-wider uppercase hover:bg-primary hover:text-on-primary transition-colors duration-150 cursor-pointer"
+          >
             Añadir
           </button>
         </div>

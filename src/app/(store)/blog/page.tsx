@@ -1,7 +1,7 @@
 // src/app/blog/page.tsx
 import type { Metadata } from 'next';
-import HorizontalBlogCard from '@/components/blog/HorizontalBlogCard';
-import { ALL_POSTS } from '@/data/blog';
+import HorizontalBlogCard from '@/features/blog/components/HorizontalBlogCard';
+import { ALL_POSTS } from '@/features/blog/data/blog';
 
 export const metadata: Metadata = {
   title: 'Cuaderno de Taller • Historias & Procesos | Origen Mates',

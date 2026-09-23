@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+    "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
   /* config options here */
 },
 };

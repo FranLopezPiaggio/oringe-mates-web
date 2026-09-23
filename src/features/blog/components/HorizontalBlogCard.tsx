@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
-import { FullBlogPost } from '@/data/blog';
+import { FullBlogPost } from '@/features/blog/data/blog';
 
 interface HorizontalBlogCardProps {
   post: FullBlogPost;

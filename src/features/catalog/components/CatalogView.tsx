@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import ProductCard from '@/components/catalog/ProductCard';
-import { CATALOG_PRODUCTS, CatalogProduct } from '@/data/catalog';
+import ProductCard from '@/features/catalog/components/ProductCard';
+import { CATALOG_PRODUCTS, CatalogProduct } from '@/features/catalog/data/catalog';
 import { SlidersHorizontal, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const CATEGORIES = ['Todas', 'Mates', 'Bombillas', 'Accesorios', 'Yerbas'];

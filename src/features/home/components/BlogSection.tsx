@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import BlogPostCard, { HorizontalBlogCard } from '../blog/HorizontalBlogCard';
+import BlogPostCard, { HorizontalBlogCard } from '../../blog/components/HorizontalBlogCard';
 
 const BLOG_POSTS: BlogHorizontalBlogCardPost[] = [
   {

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ALL_POSTS } from '@/data/blog';
+import { ALL_POSTS } from '@/features/blog/data/blog';
 import { ArrowLeft, Clock } from 'lucide-react';
 
 interface BlogPostPageProps {

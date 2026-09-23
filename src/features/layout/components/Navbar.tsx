@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Search, ChevronDown, Heart, ShoppingBag, ShoppingCart } from 'lucide-react';
+import CartTrigger from '@/features/cart/components/CartTrigger';
 
 // Server Component
 export default function Navbar() {
@@ -102,16 +103,7 @@ export default function Navbar() {
             <Heart className="w-5 h-5" />
             <span className="sr-only">Favoritos</span>
           </Link> */}
-          <Link
-            aria-label="Bolsa de Compras"
-            className="text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center gap-1.5 relative group"
-            href="#"
-          >
-            <ShoppingCart className="w-5 h-5" />
-            <span className="w-4 h-4 rounded-full bg-primary text-surface font-label-uppercase text-[10px] flex items-center justify-center font-semibold"> 
-            </span>
-            <span className="sr-only">Carrito con 2 productos</span>
-          </Link>
+          <CartTrigger />
         </div>
       </div>
     </header>

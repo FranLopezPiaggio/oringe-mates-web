@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import ProductCard, { Product } from '../catalog/ProductCard';
+import ProductCard, { Product } from '../../catalog/components/ProductCard';
 
 type FilterType = 'all' | 'new' | 'trending';
 
