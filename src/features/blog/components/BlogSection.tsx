@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import BlogPostCard, { HorizontalBlogCard } from '../../blog/components/HorizontalBlogCard';
+import BlogPostCard from './HorizontalBlogCard';
+import HorizontalBlogCard from './HorizontalBlogCard';
 
-const BLOG_POSTS: BlogHorizontalBlogCardPost[] = [
+const BLOG_POSTS: HorizontalBlogCard[] = [
   {
     id: '1',
     category: 'Artesanía',
@@ -43,7 +44,7 @@ const BLOG_POSTS: BlogHorizontalBlogCardPost[] = [
 export default function BlogSection() {
   return (
     <section
-      id="historias"
+      id="blog"
       className="w-full py-space-2xl bg-surface-container-low border-y border-outline-variant"
     >
       <div className="max-w-[1380px] mx-auto px-margin md:px-margin-desktop">

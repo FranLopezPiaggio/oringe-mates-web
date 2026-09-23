@@ -6,7 +6,7 @@ import Footer from '@/features/layout/components/Footer';
 import Hero from '@/features/home/components/Hero';
 import FeaturedProducts from '@/features/home/components/FeaturedProducts';
 import BrandManifesto from '@/features/home/components/BranManifesto';
-import BlogSection from '@/features/home/components/BlogSection';
+import BlogSection from '@/features/blog/components/BlogSection';
 import TestimonialsSection from '@/features/home/components/TestimonialsSection';
 import ContactForm from '@/features/home/components/ContactForm';
 

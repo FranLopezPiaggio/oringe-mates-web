@@ -1,5 +1,6 @@
 'use client';
 
+import { MailIcon } from 'lucide-react';
 import { useState, FormEvent } from 'react';
 
 export default function ContactForm() {
@@ -22,14 +23,13 @@ export default function ContactForm() {
 
   return (
     <section className="w-full bg-surface-container-low border-t border-outline-variant py-space-3xl">
-      <div className="max-w-2xl mx-auto px-margin text-center">
-        <span className="material-symbols-outlined text-secondary text-3xl mb-3">
-          mail
-        </span>
-
-        <h2 className="font-headline-lg-mobile md:font-headline-lg text-primary mb-3">
-          Únete a nuestro círculo
+      <div className="max-w-2xl mx-auto px-margin flex flex-col text-center">
+      <div className="flex items-center justify-center gap-3">
+        <MailIcon className="shrink-0 mt-2" />
+        <h2 className="font-headline-lg-mobile md:font-headline-lg text-primary">
+          Únete a nuestra ronda
         </h2>
+      </div>
 
         <p className="font-body-md text-on-surface-variant mb-8 max-w-lg mx-auto">
           Recibe cartas editoriales sobre nuevos lanzamientos, eventos de taller y un 10% de cortesía en tu primera orden.

@@ -1,3 +1,4 @@
+import { Banknote, CreditCard, Package } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -8,35 +9,12 @@ export default function Footer() {
           {/* Columna 1: Logo & Redes */}
           <div className="space-y-4">
             <span className="font-title-editorial text-headline-sm uppercase text-primary block">
-              ATELIER MORELIA
+              ORIGEN MATES
             </span>
             <p className="font-body-sm text-on-surface-variant leading-relaxed">
-              Taller artesanal de piezas de cerámica, textiles en hilado lento y botánica consciente para el hogar sereno.
+              Mates y accesorios, tradicion en el dia a dia.
             </p>
             <div className="flex items-center gap-4 pt-2 text-on-surface-variant">
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="hover:text-primary transition-colors"
-              >
-                <span className="font-label-uppercase text-label-uppercase tracking-wider">Instagram</span>
-              </a>
-              <span className="text-outline-variant">•</span>
-              <a
-                href="#"
-                aria-label="Pinterest"
-                className="hover:text-primary transition-colors"
-              >
-                <span className="font-label-uppercase text-label-uppercase tracking-wider">Pinterest</span>
-              </a>
-              <span className="text-outline-variant">•</span>
-              <a
-                href="#"
-                aria-label="Spotify"
-                className="hover:text-primary transition-colors"
-              >
-                <span className="font-label-uppercase text-label-uppercase tracking-wider">Spotify</span>
-              </a>
             </div>
           </div>
 
@@ -47,11 +25,6 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#productos" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
-                  Colecciones de Temporada
-                </Link>
-              </li>
-              <li>
                 <Link href="#" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
                   Envíos y Entregas
                 </Link>
@@ -59,16 +32,6 @@ export default function Footer() {
               <li>
                 <Link href="#" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
                   Preguntas Frecuentes
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
-                  Guía de Tallas &amp; Cuidados
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
-                  Stockists &amp; Puntos de Venta
                 </Link>
               </li>
             </ul>
@@ -100,11 +63,6 @@ export default function Footer() {
                   Defensa del Consumidor
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="font-body-sm text-on-surface-variant hover:text-primary transition-colors">
-                  Shipping &amp; Provenance
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -114,8 +72,8 @@ export default function Footer() {
               Contacto &amp; Showroom
             </h3>
             <p className="font-body-sm text-on-surface-variant">
-              Pasaje de los Artesanos 420<br />
-              San Telmo, Buenos Aires, Argentina
+              Posadas<br />
+              Misiones, Argentina
             </p>
             <p className="font-body-sm text-on-surface-variant">
               Miércoles a Sábados: 11:00 a 19:00 hs
@@ -138,7 +96,7 @@ export default function Footer() {
         {/* Barra inferior de copyright y sellos */}
         <div className="mt-12 pt-6 border-t border-outline-variant flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body-sm text-[12px] text-outline text-center md:text-left">
-            © 2025 Atelier Morelia. All rights reserved. Handcrafted slowly and sustainably.
+            © 2026 Origen Mates. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             <span className="font-label-uppercase text-[10px] text-outline tracking-wider uppercase">
@@ -146,13 +104,13 @@ export default function Footer() {
             </span>
             <div className="flex items-center gap-3 text-outline">
               <span className="material-symbols-outlined text-xl" title="Tarjetas de crédito y débito">
-                credit_card
+                <CreditCard/>
               </span>
               <span className="material-symbols-outlined text-xl" title="Pagos bancarios">
-                account_balance
+                <Banknote/>
               </span>
               <span className="material-symbols-outlined text-xl" title="Embalaje seguro y sustentable">
-                package_2
+                <Package/>
               </span>
             </div>
           </div>

@@ -10,11 +10,11 @@ export default function Navbar() {
       <div className="max-w-[1380px] mx-auto px-margin md:px-margin-desktop pt-6 pb-4 flex flex-col items-center justify-center border-b border-outline-variant/60">
         <Link className="group text-center" href="/">
           <span className="font-display-hero-mobile md:font-headline-lg text-[28px] md:text-[40px] text-primary tracking-tight font-medium uppercase block transition-opacity duration-200 group-hover:opacity-85">
-            ORIGEN MATES
+            Origen Mates
           </span>
-          <span className="font-label-uppercase text-on-surface-variant tracking-[0.25em] uppercase block mt-1">
+          {/* <span className="font-label-uppercase text-on-surface-variant tracking-[0.25em] uppercase block mt-1">
             COMPARTIR
-          </span>
+          </span> */}
         </Link>
       </div>
 
@@ -41,35 +41,41 @@ export default function Navbar() {
         {/* Centro: Navegación Principal */}
         <nav className="hidden md:flex items-center justify-center gap-8">
           <div className="relative group">
-            <button className="flex items-center gap-1 font-label-uppercase text-on-surface-variant hover:text-primary transition-colors duration-150 uppercase tracking-wider py-2">
+            <Link className="flex items-center gap-1 font-label-uppercase text-on-surface-variant hover:text-primary transition-colors duration-150 uppercase tracking-wider py-2" href="/catalog">
               Categorías
               <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-            </button>
+            </Link>
             {/* Dropdown Sutil */}
             <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest border border-outline-variant py-3 px-5 shadow-sm min-w-[180px] z-50">
               <Link
                 className="py-1.5 font-body-sm text-on-surface-variant hover:text-primary transition-colors"
                 href="#productos"
               >
-                Cerámica Artesanal
+                Mates
               </Link>
               <Link
                 className="py-1.5 font-body-sm text-on-surface-variant hover:text-primary transition-colors"
                 href="#productos"
               >
-                Textiles de Lino
+                Bombillas &amp; Accesorios
               </Link>
               <Link
                 className="py-1.5 font-body-sm text-on-surface-variant hover:text-primary transition-colors"
                 href="#productos"
               >
-                Botánica &amp; Velas
+                Termos
               </Link>
               <Link
                 className="py-1.5 font-body-sm text-on-surface-variant hover:text-primary transition-colors"
                 href="#productos"
               >
-                Vajilla de Arcilla
+                Bolsos, Materas &amp; Transporte
+              </Link>
+              <Link
+                className="py-1.5 font-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="#productos"
+              >
+                Yerbas, Botanicos &amp; Blends
               </Link>
             </div>
           </div>
