@@ -1,26 +1,192 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Paleta de Colores personalizada */
+  --color-primary: #182519;
+  --color-primary-container: #2d3b2d;
+  --color-primary-fixed: #d7e7d3;
+  --color-primary-fixed-dim: #bbcbb8;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #95a593;
+  --color-on-primary-fixed: #111f12;
+  --color-on-primary-fixed-variant: #3c4a3c;
+  --color-inverse-primary: #bbcbb8;
+
+  --color-secondary: #53634b;
+  --color-secondary-container: #d3e5c7;
+  --color-secondary-fixed: #d6e8ca;
+  --color-secondary-fixed-dim: #baccaf;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #57674f;
+  --color-on-secondary-fixed: #111f0d;
+  --color-on-secondary-fixed-variant: #3b4b35;
+
+  --color-tertiary: #2f2000;
+  --color-tertiary-container: #4a3400;
+  --color-tertiary-fixed: #ffdea4;
+  --color-tertiary-fixed-dim: #eec067;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #c59b46;
+  --color-on-tertiary-fixed: #261900;
+  --color-on-tertiary-fixed-variant: #5d4200;
+
+  --color-background: #fff8f5;
+  --color-on-background: #1f1b18;
+
+  --color-surface: #fff8f5;
+  --color-on-surface: #1f1b18;
+  --color-surface-dim: #e2d8d3;
+  --color-surface-bright: #fff8f5;
+  --color-surface-variant: #ebe0db;
+  --color-on-surface-variant: #444842;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fcf2ec;
+  --color-surface-container: #f6ece7;
+  --color-surface-container-high: #f0e6e1;
+  --color-surface-container-highest: #ebe0db;
+  --color-surface-tint: #536252;
+  --color-inverse-surface: #352f2c;
+  --color-inverse-on-surface: #f9efea;
+
+  --color-outline: #747872;
+  --color-outline-variant: #c4c8c0;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Fuentes dinámicas */
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Selección de texto personalizada */
+::selection {
+  background-color: #d3e5c7;
+  color: #182519;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Utilidades personalizadas (SOLO nombres alfanuméricos con guiones) */
+@utility px-margin {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility px-margin-desktop {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@utility font-label-uppercase {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+@utility font-display-hero-mobile {
+  font-family: var(--font-playfair), serif;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+@utility font-display-hero {
+  font-family: var(--font-playfair), serif;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+@utility font-headline-lg {
+  font-family: var(--font-playfair), serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+@utility font-title-editorial {
+  font-family: var(--font-playfair), serif;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+@utility font-body-sm {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@utility font-body-lg {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@utility py-space-2xl {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@utility py-space-3xl {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@utility gap-gutter-desktop {
+  gap: 2.5rem;
+}
+
+@utility mb-space-xl {
+  margin-bottom: 2.5rem;
+}
+
+@utility gap-gutter {
+  gap: 1.5rem;
+}
+
+@utility font-headline-lg-mobile {
+  font-family: var(--font-playfair), serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+@utility font-body-md {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@utility font-headline-sm {
+  font-family: var(--font-playfair), serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@utility text-headline-sm {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@utility gap-gutter-desktop {
+  gap: 2rem;
+}
+
+@utility font-headline-md {
+  font-family: var(--font-playfair), serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
 }
